@@ -2,10 +2,9 @@
 import Checkbox from '@/Components/Checkbox.vue';
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import InputError from '@/Components/InputError.vue';
-import InputLabel from '@/Components/InputLabel.vue'
+import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
-import ApplicationLogo from "@/Components/ApplicationLogo.vue";
 import { Head, Link, useForm } from '@inertiajs/vue3';
 
 defineProps({
@@ -28,16 +27,19 @@ const submit = () => {
 
 <template>
     <GuestLayout>
-        <Head title="Log in" />
+        <Head title="Masuk" />
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
             {{ status }}
         </div>
 
-        <div class="flex gap-3 justify-between">
-            <div class="text-center">
-                <h1 class="title">Login</h1>
-                <h2 class="sub-title">Untuk login ke akun Anda, <br> Masukkan alamat email dan kata sandi Anda.</h2>
+        <div class="flex justify-between">
+            <div class="w-1/2 box bg-white p-10">
+                <div class="mb-8">
+                    <center>
+                        <img src="/img/logo/logo.png" class=" w-32" alt="logo">
+                    </center>
+                </div>
                 
                 <form @submit.prevent="submit">
                     <div>
@@ -56,7 +58,7 @@ const submit = () => {
                         <InputError class="mt-2" :message="form.errors.email" />
                     </div>
 
-                    <div class="mt-4">
+                    <div class="mt-6">
                         <InputLabel for="password" value="Password" />
                         <TextInput
                             id="password"
@@ -71,41 +73,41 @@ const submit = () => {
                         <InputError class="mt-2" :message="form.errors.password" />
                     </div>
 
-                    <div class="flex justify-between mt-4">
+                    <div class="flex justify-between mt-6">
                         <label class="flex items-center">
                             <Checkbox name="remember" v-model:checked="form.remember" />
-                            <span class="ml-1 text-sm text-gray-600">Remember me</span>
+                            <span class="text-xs text-gray-600">Remember me</span>
                         </label>
 
                         <Link
                             v-if="canResetPassword"
                             :href="route('password.request')"
-                            class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            class="underline text-xs text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
                             Lupa Password?
                         </Link>
                     </div>
 
-                    <div class="mt-4">
+                    <div class="mt-6">
                         <PrimaryButton class="w-full text-center" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                            Log in
+                            Masuk
                         </PrimaryButton>
                     </div>
-
-                    <div class="mt-6 sub-title">
-                        Belum memiliki akun? <Link
-                    :href="route('login')"
-                    class="text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 font-bold"
-                >
-                    Register
-                </Link>
-                    </div>
                 </form>
+                
+                <div class="mt-6 text-xs text-center">
+                    Belum Punya Akun? 
+                    <Link :href="route('register')"
+                        class="text-xs text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 underline font-bold">
+                        Daftar
+                    </Link>
+                </div>
             </div>
 
-            <div>
-                <img src="{{ asset('img/logo.png') }}" alt="">
-                <ApplicationLogo class="w-20 h-20 fill-current text-gray-500" />
+            <div class=" w-1/2">
+                <img src="/img/ilustrasi/berkebun.jpg"
+                class="box h-full"
+                alt="Ilustrasi Berkebun" />
             </div>
         </div>
     </GuestLayout>

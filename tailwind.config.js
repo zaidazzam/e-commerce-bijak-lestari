@@ -16,7 +16,11 @@ module.exports = {
             },
             colors: {
                 customGreen: "#e5f6e4",
+                customGray: "#c6c0b9"
             },
+            backgroundImage: {
+                ilusLogin: "url(/img/ilustrasi/berkebun.jpg)"
+            }
         },
     },
 

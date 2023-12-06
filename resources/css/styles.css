@@ -1,0 +1,28 @@
+.title {
+    @apply
+    font-bold text-3xl my-5
+}
+
+.sub-title {
+    @apply
+    text-sm mb-5
+}
+
+.pilihan {
+    font-size: 12px;
+}
+
+.box {
+    @apply
+    sm:rounded-3xl
+}
+
+.row {
+    @apply
+    flex gap-2
+}
+
+.row .register {
+    @apply
+    w-full
+}
