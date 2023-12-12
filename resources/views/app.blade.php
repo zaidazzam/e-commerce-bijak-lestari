@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title inertia>{{ config('app.name', 'Laravel') }}</title>
+    <title inertia>{{ config('app.name', 'Bijak Lestari') }}</title>
     <link rel="shortcut icon" href="/img/logo/favicon.png" type="image/x-icon">
 
     <!-- Fonts -->
@@ -15,6 +15,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
 
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
