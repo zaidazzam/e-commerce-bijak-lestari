@@ -3,7 +3,7 @@
         <div class="text-white max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <div>
                 <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="/img/logo/logo.png" class="h-16" alt="Logo" />
+                    <img src="/img/logo/logo.png" class="h-12" alt="Logo" />
                 </a>
             </div>
 
