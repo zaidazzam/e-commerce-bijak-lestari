@@ -217,10 +217,10 @@ const { artikels } = defineProps(["artikels"]);
                 </p>
             </div>
             <div
-                class="flex flex-col md:flex-row md:justify-between justify-center"
+                class="flex flex-col md:flex-row justify-center gap-4"
             >
                 <Box
-                    thumbnail="/img/blog.png"
+                    image="/img/blog.png"
                     v-for="artikel in artikels"
                     :key="artikel.id"
                     :created_at="artikel.created_at"
@@ -228,21 +228,6 @@ const { artikels } = defineProps(["artikels"]);
                     :deskripsi="artikel.deskripsi"
                     link="/toolskit"
                 />
-
-                <!-- <Box
-                    thumbnail="/img/blog.png"
-                    publicationDate="10 Desember 2023"
-                    title="Creating a Pollinator Friendly Garden"
-                    description="Vivamus accumsan diam eget ultricies auctor. Proin iaculis metus vel condimentum tincidunt."
-                    link="/toolskit"
-                />
-                <Box
-                    thumbnail="/img/blog.png"
-                    publicationDate="10 Desember 2023"
-                    title="Creating a Pollinator Friendly Garden"
-                    description="Vivamus accumsan diam eget ultricies auctor. Proin iaculis metus vel condimentum tincidunt."
-                    link="/toolskit"
-                /> -->
             </div>
         </div>
     </section>
