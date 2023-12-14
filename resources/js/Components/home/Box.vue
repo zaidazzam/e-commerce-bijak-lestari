@@ -14,8 +14,6 @@
 </template>
   
 <script setup>
-import { ref } from 'vue';
-
-const { props } = defineProps(['thumbnail', 'publicationDate', 'title', 'description', 'link']);
+    const { props } = defineProps(['thumbnail', 'publicationDate', 'title', 'description', 'link']);
 </script>
   
