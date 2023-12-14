@@ -11,7 +11,7 @@
         <div class="py-6 px-4 flex flex-col gap-3">
             <p class="text-sm text-customGreenLight">{{ created_at }}</p>
             <p class="text-2xl text-black font-bold">{{ title }}</p>
-            <p>{{ deskripsi }}</p>
+            <p class="deskripsi">{{ deskripsi }}</p>
             <a
                 :href="link"
                 class="underline text-customGreenLight font-medium text-base"
@@ -30,3 +30,14 @@ const { props } = defineProps([
     "link",
 ]);
 </script>
+
+<style scoped>
+.deskripsi {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+</style>
