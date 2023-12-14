@@ -21,6 +21,8 @@ use Inertia\Inertia;
 */
 
 
+
+//-------------------------------------------------GUEST-------------------------------------------------
 Route::get('/', [GuestController::class, 'landing'], function () {
     return Inertia::render('LandingPage', [
         'canLogin' => Route::has('login'),
@@ -30,6 +32,11 @@ Route::get('/', [GuestController::class, 'landing'], function () {
     ]);
 });
 
+Route::get('/artikel', [GuestController::class, 'artikel'])->name('artikels.index');
+Route::get('/artikel/detail/1', [GuestController::class, 'detailArtikel'])->name('artikels.index');
+
+
+//-------------------------------------------------GUEST-------------------------------------------------
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -42,7 +49,7 @@ Route::middleware('auth')->group(function () {
 
 
     // Artikel
-    Route::get('/artikel', [ArtikelController::class, 'index'])->name('artikels.index');
+    Route::get('/dataartikel', [ArtikelController::class, 'index'])->name('artikels.index');
     Route::get('/artikel/tambah', [ArtikelController::class, 'create'])->name('artikels.tambah');
     Route::get('/artikel/edit/{id}', [ArtikelController::class, 'edit'])->name('artikels.edit');
 

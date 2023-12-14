@@ -14,4 +14,15 @@ class GuestController extends Controller
         $testimonis = Testimoni::all();
         return Inertia::render('LandingPage', ['artikels' => $artikels, 'testimonis' => $testimonis]);
     }
+
+    public function artikel(){
+        $artikels = Artikel::all();
+        return Inertia::render('Guest/Artikel/Artikel', ['artikels' => $artikels]);
+
+    }
+    public function detailArtikel(){
+        $artikels = Artikel::all();
+        return Inertia::render('Guest/Artikel/DetailArtikel', ['artikels' => $artikels]);
+
+    }
 }
