@@ -9,7 +9,7 @@ import Testimonial from "@/Components/home/Testimoni.vue";
 import { defineComponent } from "vue";
 import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
-// Import props
+
 const { artikels } = defineProps(["artikels"]);
 </script>
 
@@ -223,7 +223,7 @@ const { artikels } = defineProps(["artikels"]);
                     thumbnail="/img/blog.png"
                     v-for="artikel in artikels"
                     :key="artikel.id"
-                    :created_at="artikel.publicationDate"
+                    :created_at="artikel.created_at"
                     :judul="artikel.judul"
                     :deskripsi="artikel.deskripsi"
                     link="/toolskit"
