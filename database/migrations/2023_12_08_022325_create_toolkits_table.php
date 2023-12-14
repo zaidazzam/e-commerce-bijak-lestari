@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('toolkits', function (Blueprint $table) {
             $table->id();
+            $table->string('nama');
+            $table->integer('harga');
+            $table->text('deskripsi');
+            $table->string('benefit');
+            $table->string('kategori');
+            $table->string('image')->nullable();
+            $table->string('file_booklet');
             $table->timestamps();
         });
     }
