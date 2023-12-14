@@ -14,6 +14,15 @@ module.exports = {
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                customGreen: "#3D7068",
+                customGray: "#c6c0b9",
+                customGreenLight: "#43C59E",
+                customGreenBg: "#E5F6E4"
+            },
+            backgroundImage: {
+                ilusLogin: "url(/img/ilustrasi/berkebun.jpg)"
+            }
         },
     },
 

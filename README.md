@@ -6,6 +6,17 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+## Build Project
+
+
+ - Git Clone
+ - Composer install
+ - npm install
+ - edit .env
+ - php artisan migrate
+ - php artisan key:generate
+ - npm run dev
+ - php artisan serve
 
 ## About Laravel
 
