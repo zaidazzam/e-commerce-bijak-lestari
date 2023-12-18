@@ -1,47 +1,26 @@
 <script setup>
-import { Head, Link } from "@inertiajs/vue3";
-import Navbar from "@/Components/Navbar.vue";
-import Footer from "@/Components/Footer.vue";
-import Button from "@/Components/Button.vue";
-import Kategori from "@/Components/Kategori.vue";
-import Box from "@/Components/home/Box.vue";
-import Testimonial from "@/Components/home/Testimoni.vue";
-import { defineComponent } from "vue";
-import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
-import "vue3-carousel/dist/carousel.css";
+import { Head } from "@inertiajs/vue3";
+import Container from "@/Components/Container.vue";
 
+/*Get Data From Database */
 const { artikels } = defineProps(["artikels"]);
 </script>
+
 <template>
-    <Head title="Bijak Lestari" />
-    <Navbar />
-    <Footer />
+    <Head title="Detail" />
+    <Container>
+        <section>
+            <img src="/img/blog.png" alt="Artikel Image" class="w-full">
+        </section>
+        <section>
+            <div class="section-title">
+                <h2>{{ artikels[0].judul }}</h2>
+                <span>{{ artikels[0].created_at }}</span>
+                <hr class="my-5">
+                <p>
+                    {{ artikels[0].deskripsi }}
+                </p>
+            </div>
+        </section>
+    </Container>
 </template>
-
-<script></script>
-
-<style>
-.carousel__item {
-    min-height: 200px;
-    width: 100%;
-    background-color: red;
-    color: black;
-    font-size: 20px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel__slide {
-    padding: 10px;
-}
-
-.carousel__prev,
-.carousel__next {
-    box-sizing: content-box;
-    background: rgba(59, 93, 80, 0.1);
-    padding: 1rem;
-    border-radius: 100%;
-}
-</style>
