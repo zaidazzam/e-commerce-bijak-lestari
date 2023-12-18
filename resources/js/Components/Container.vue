@@ -6,7 +6,9 @@ import Footer from "@/Components/Footer.vue";
 <template>
     <section class="mx-auto w-full max-w-screen-xl">
         <Navbar/>
-        <slot/>
+        <section class="px-4 lg:py-3 flex flex-col gap-8">
+            <slot/>
+        </section>
         <Footer/>
     </section>
 </template>
