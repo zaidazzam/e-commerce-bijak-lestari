@@ -7,7 +7,7 @@
                 </a>
             </div>
 
-            <span @click="MenuOpen()" class="absolute md:hidden right-6 top-6 cursor-pointer text-4xl">
+            <span @click="menuOpen()" class="absolute md:hidden right-6 top-6 cursor-pointer text-4xl">
                 <i :class="[open ? 'bi bi-x' : 'bi bi-filter-left']"></i>
             </span>
 
@@ -48,11 +48,11 @@ export default {
             { name: "Tentang", link: "/tentang" }
         ];
 
-        function MenuOpen() {
+        function menuOpen() {
             open.value = !open.value
         }
 
-        return { links, open, MenuOpen };
+        return { links, open, menuOpen };
     }
 }
 </script>

@@ -2,7 +2,7 @@
 import Kategori from "@/Components/Kategori.vue";
 </script>
 <template>
-    <div id="paket-section">
+    <section id="paket-section">
         <div class="section-title">
             <h2>Toolskit Unggulan</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
@@ -76,5 +76,5 @@ import Kategori from "@/Components/Kategori.vue";
         <div class="w-[500px] mt-10 mx-auto bg-customGreen text-white text-sm text-center p-4 rounded-lg">
             <a href="/toolskit">Selengkapnya</a>
         </div>
-    </div>
+    </section>
 </template>
