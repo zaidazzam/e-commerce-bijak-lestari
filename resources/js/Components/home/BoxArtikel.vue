@@ -6,9 +6,9 @@
         </div>
         <div class="py-6 px-4 flex flex-col gap-3">
             <p class="text-sm text-customGreenLight">{{ formattedCreatedAt  }}</p>
-            <p class="text-2xl text-black font-bold">{{ judul }}</p>
-            <p class="deskripsi">{{ deskripsi }}</p>
-            <a :href="link" class="underline text-customGreenLight font-medium text-base">Read More ...</a>
+            <p class="text-xl text-black font-bold">{{ judul }}</p>
+            <p class="deskripsi text-sm">{{ deskripsi }}</p>
+            <a :href="link" class="text-customGreenLight font-medium text-sm">Read More ...</a>
         </div>
     </div>
 </template>

@@ -52,7 +52,8 @@ import "vue3-carousel/dist/carousel.css";
                     </p>
                 </div>
                 <div class="flex flex-col md:flex-row justify-center gap-4">
-                    <Box image="/img/blog.png" v-for="artikel in artikels" :key="artikel.id"
+                    <Box v-for="artikel in artikels" :key="artikel.id"
+                        image="img/blog.png"
                         :created_at="artikel.created_at" :judul="artikel.judul" :deskripsi="artikel.deskripsi"
                         link="/toolskit" />
                 </div>
